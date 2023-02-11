@@ -1,7 +1,8 @@
 /* ABOUT PAGE */
 
 .ark-about__title,
-.ark-pay__title {
+.ark-pay__title,
+.ark-delivery__title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-align: center;
@@ -18,7 +19,8 @@
 }
 
 .ark-about__text,
-.ark-pay__text {
+.ark-pay__text,
+.ark-delivery__text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -324,7 +326,8 @@
     margin-bottom: 55px;
 }
 
-.ark-pay__img-box {
+.ark-pay__img-box,
+.ark-delivery__img-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,13 +338,15 @@
     border-radius: 20px;
 }
 
-.ark-pay__info {
+.ark-pay__info,
+.ark-delivery__info {
     display: flex;
     flex-direction: column;
     max-width: 750px;
 }
 
-.ark-pay__subtitle {
+.ark-pay__subtitle,
+.ark-delivery__subtitle {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -383,6 +388,98 @@
     left: 2px;
     content: url(../images/pay/arrow-list.svg);
 
+}
+
+
+/* DELIVERY PAGE */
+
+.ark-delivery__inner {
+    margin-top: 45px;
+}
+
+.ark-delivery__item {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 40px;
+    margin-bottom: 55px;
+}
+
+.ark-delivery__img-box {}
+
+.ark-delivery__info {}
+
+.ark-delivery__subtitle {}
+
+.ark-delivery__info-box {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.ark-delivery__info-column {
+    width: 350px;
+}
+
+.ark-delivery__text {}
+
+.ark-delivery__address {
+    font-style: normal;
+}
+
+.ark-delivery__info-link {}
+
+.ark-delivery__benefits {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 60px;
+}
+
+.ark-delivery__benefits-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #c1c2c2;
+    border-radius: 20px;
+}
+
+.ark-delivery__caption {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.ark-delivery__pickup {
+    border: 1px solid #c1c2c2;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.ark-delivery__rules {}
+
+.ark-delivery__rules-list {}
+
+.ark-delivery__rules-items {}
+
+.ark-delivery__document {
+    border: 1px solid #c1c2c2;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 30px;
+    margin-bottom: 50px;
 }
 
 
@@ -469,12 +566,14 @@
         font-size: 36px;
     }
 
-    .ark-pay__item {
+    .ark-pay__item,
+    .ark-delivery__item {
         flex-direction: column;
         margin-bottom: 30px;
     }
 
-    .ark-pay__img-box {
+    .ark-pay__img-box,
+    .ark-delivery__img-box {
         max-width: 160px;
     }
 
