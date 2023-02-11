@@ -1,4 +1,6 @@
-.about__title {
+/* ABOUT PAGE */
+
+.ark-about__title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-align: center;
@@ -10,11 +12,11 @@
     text-align: center;
 }
 
-.about__content {
+.ark-about__content {
     margin: 60px 0 80px;
 }
 
-.about__text {
+.ark-about__text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -22,11 +24,11 @@
     color: #000000;
 }
 
-.about__text-first {
+.ark-about__text-first {
     margin-bottom: 70px;
 }
 
-.about__link {
+.ark-about__link {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -34,36 +36,59 @@
     cursor: pointer;
 }
 
-.about__text-active {
+.ark-about__text-active {
     color: #44558f;
     margin-bottom: 60px;
 }
 
-.about__item {
-    margin-bottom: 60px;
+.ark-about__slider {
+    margin-bottom: 95px;
 }
 
-.about__content-bottom {
+.ark-about__item {
+    overflow: hidden;
+    max-height: 500px;
+}
+
+.ark-about__item-img {
+    object-fit: cover;
+}
+
+.ark-slider__counter {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.ark-slider__counter--active {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #44558f;
+}
+
+.ark-about__content-bottom {
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
 }
 
-.about__content-bottom-country {
+.ark-about__content-bottom-country {
     max-width: 510px;
 }
 
-.about__text-country {
+.ark-about__text-country {
     max-width: 410px;
 }
 
-.about__country-box {
+.ark-about__country-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.country {
+.ark-country {
     border-radius: 50%;
     color: #44558f;
     border: 1px dashed #dddada;
@@ -71,7 +96,7 @@
     position: relative;
 }
 
-.country::after {
+.ark-country::after {
     content: '--';
     position: absolute;
     top: 40%;
@@ -79,11 +104,11 @@
     color: #dddada;
 }
 
-.country:last-child:after {
+.ark-country:last-child:after {
     display: none;
 }
 
-.cercle {
+.ark-cercle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,20 +119,20 @@
     overflow: hidden;
 }
 
-.cercle-img {
+.ark-cercle-img {
     object-fit: cover;
 }
 
-.about__content-bottom-info-box {
+.ark-about__content-bottom-info-box {
     display: flex;
     justify-content: space-between;
 }
 
-.about__content-bottom-info-desc {
+.ark-about__content-bottom-info-desc {
     width: 210px;
 }
 
-.about__info-num {
+.ark-about__info-num {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 36px;
@@ -115,57 +140,54 @@
     color: #44558f;
 }
 
-.about__info-product {
+.ark-about__info-product {
     font-size: 16px;
     line-height: 24px;
     font-style: italic;
     color: #bebbbb;
 }
 
+/* bussines blok*/
 
-/* bussines */
-
-.bussines {
+.ark-bussines {
     padding-bottom: 100px;
 }
 
-.bussines__inner {
+.ark-bussines__inner {
     display: flex;
     justify-content: space-between;
-    column-gap: 50px;
+    gap: 50px;
     margin-top: 70px;
 }
 
-.bussines__item {
+.ark-bussines__item {
     position: relative;
     width: 500px;
     padding: 30px;
 }
 
-.bussines__item-left {
+.ark-bussines__item-left {
     background-image: url(../images/bg-bussines.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
 }
 
-.bussines__item-right {
+.ark-bussines__item-right {
     background-image: url(../images/bg-bussines.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
 }
 
-.bussines__subtitle {
+.ark-bussines__subtitle {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
     color: #000000;
 }
 
-.bussines__list {}
-
-.bussines__items {
+.ark-bussines__items {
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 18px;
@@ -173,11 +195,11 @@
     color: #000000;
 }
 
-.bussines__items::before {
+.ark-bussines__items::before {
     content: url(../images/okey.svg);
 }
 
-.bussines__item::after {
+.ark-bussines__item::after {
     position: absolute;
     content: '';
     top: 0;
@@ -188,31 +210,31 @@
     z-index: 10;
 }
 
-.bussines__text {
+.ark-bussines__text {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #000000;
 }
 
-.bussines__text {
+.ark-bussines__text {
     margin-bottom: 0;
 }
 
-/* IDIA */
+/* isea blok */
 
-.idea__inner {
+.ark-idea__inner {
     margin: 60px 0 90px;
 }
 
-.about__btn-box {
+.ark-about__btn-box {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
 }
 
-.about__btn {
+.ark-about__btn {
     width: 280px;
     height: 80px;
     background-color: #44558f;
@@ -225,62 +247,156 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
-.about__btn:before {
+.ark-about__btn:before {
     content: url(../images/arrow-right.png);
     position: absolute;
     top: 40%;
     left: -40px;
 }
 
-.about__btn::after {
+.ark-about__btn::after {
     content: url(../images/arrow-left.png);
     position: absolute;
     top: 40%;
     right: -40px;
 }
 
-/* RESOURS */
+/* resource blok */
 
-.resource {
+.ark-resource {
     margin-bottom: 100px;
 }
 
-.resource__inner {
+.ark-about__img {
+    margin-bottom: 60px;
+}
+
+.ark-about__img-festool {
+    margin-bottom: 40px;
+}
+
+.ark-resource__inner {
     margin-top: 40px;
 }
 
-.resource__sertificat-box {
+.ark-resource__sertificat-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 5px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.resource__sertificat-img {
+.ark-resource__sertificat-img {
     object-fit: cover;
 }
 
-/* CENTER */
+/* center blok */
 
-.cente {}
-
-.about__title {}
-
-.center__inner {
+.ark-center__inner {
     margin-top: 40px;
 }
 
-.about__text {}
-
-.about__subtitle {
+.ark-about__subtitle {
     font-weight: 700;
     font-size: 22px;
     line-height: 24px;
     color: #44558f;
 }
 
-.about__btn-box {}
 
-.about__btn {}
+@media(max-width: 1300px) {
+    .ark-about__content-bottom {
+        flex-direction: column;
+    }
+
+    .ark-about__country-box {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 990px) {
+    .ark-about__slider {
+        margin-bottom: 30px;
+    }
+
+    .ark-bussines__inner {
+        flex-direction: column;
+    }
+
+    .ark-bussines__item {
+        width: 100%;
+    }
+
+    .ark-idea__inner {
+        margin: 40px 0;
+    }
+
+    .ark-about__btn-box {
+        margin-bottom: 40px;
+    }
+
+    .ark-resource__sertificat-box {
+        justify-content: center;
+    }
+
+}
+
+@media(max-width: 720px) {
+    .ark-about__slider {
+        margin-bottom: 40px;
+    }
+
+    .ark-about__text-active {
+        margin-bottom: 30px;
+    }
+
+    .ark-country::after {
+        display: none;
+    }
+
+    .ark-about__slider-btn-box {
+        margin-top: 20px;
+    }
+
+    .ark-about__info-num {
+        font-size: 26px;
+    }
+
+    .ark-about__img {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 520px) {
+    .ark-about__country-box {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .ark-about__content-bottom-info-box {
+        flex-wrap: wrap;
+    }
+
+    .ark-about__text-first {
+        margin-bottom: 50px;
+    }
+
+    .ark-about__title {
+        font-size: 36px;
+    }
+
+}
+
+@media(max-width: 400px) {
+
+    .ark-about__btn::after,
+    .ark-about__btn::before {
+        display: none;
+    }
+
+}
