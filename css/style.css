@@ -353,11 +353,11 @@
     font-size: 24px;
     line-height: 24px;
     color: #44558f;
-    margin: 0;
-    margin-bottom: 30px;
+    margin: 0 0 50px 0;
 }
 
-.ark-pay__subtitle::after {
+.ark-pay__subtitle::after,
+.ark-delivery__subtitle::after {
     position: absolute;
     bottom: -15px;
     left: 0;
@@ -387,7 +387,6 @@
     top: 0;
     left: 2px;
     content: url(../images/pay/arrow-list.svg);
-
 }
 
 
@@ -404,16 +403,12 @@
     margin-bottom: 55px;
 }
 
-.ark-delivery__img-box {}
-
-.ark-delivery__info {}
-
-.ark-delivery__subtitle {}
-
 .ark-delivery__info-box {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     column-gap: 30px;
+    margin-bottom: 50px;
 }
 
 .ark-delivery__info-column {
@@ -423,25 +418,33 @@
 .ark-delivery__text {}
 
 .ark-delivery__address {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     font-style: normal;
 }
 
-.ark-delivery__info-link {}
+.ark-delivery__info-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
 
 .ark-delivery__benefits {
     display: flex;
     justify-content: space-between;
-    gap: 35px;
-    margin-bottom: 60px;
+    gap: 20px;
 }
 
 .ark-delivery__benefits-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 20px;
-    padding: 20px;
-    width: 300px;
+    column-gap: 12px;
+    width: 240px;
+    padding: 12px;
     border: 1px solid #c1c2c2;
     border-radius: 20px;
 }
@@ -449,8 +452,8 @@
 .ark-delivery__caption {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 17px;
     color: #000000;
 }
 
@@ -460,16 +463,52 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 20px;
+    column-gap: 75px;
     padding: 30px;
     margin-bottom: 50px;
 }
 
 .ark-delivery__rules {}
 
-.ark-delivery__rules-list {}
+.ark-delivery__rules-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 40px;
+}
 
-.ark-delivery__rules-items {}
+.ark-delivery__rules-list {
+    counter-reset: name 0;
+}
+
+.ark-delivery__rules-items {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 40px;
+    padding-left: 60px;
+    position: relative;
+}
+
+.ark-delivery__rules-items::before {
+    font-weight: 700;
+    counter-increment: name;
+    content: counter(name);
+    border: 1px solid #6b7dba;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -8px;
+    left: 0;
+}
 
 .ark-delivery__document {
     border: 1px solid #c1c2c2;
@@ -477,10 +516,134 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 20px;
+    column-gap: 70px;
     padding: 30px;
     margin-bottom: 50px;
 }
+
+.ark-delivery__list-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 25px;
+}
+
+.ark-delivery__list-item::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: url(../images/pay/arrow-list.svg);
+}
+
+.ark-pay__text-upper {
+    text-transform: uppercase;
+    padding-bottom: 16px;
+}
+
+.ark-delivery__cdek {
+    margin-bottom: 60px;
+}
+
+
+.ark-delivery__cdek-box {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.ark-delivery__cdek-calc {
+    justify-content: space-between;
+}
+
+.ark-delivery__text-calc {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    max-width: 360px;
+    margin-bottom: 0;
+}
+
+.ark-delivery__cdek-col div {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 20px;
+    border-left: 1px solid #a1aac7;
+    margin-left: 15px;
+}
+
+.ark-delivery__cdek-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    width: 240px;
+    padding: 12px;
+    border: 1px solid #c1c2c2;
+    border-radius: 20px;
+}
+
+.ark-delivery__subtitle-bottom {
+    margin-left: 200px;
+}
+
+.ark-delivery__subtitle-bottom::after {
+    content: none;
+}
+
+.ark-delivery__benefits {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ark-delivery__item-bottom {
+    padding-bottom: 100px;
+}
+
+.ark-delivery__bottom-items {
+    width: 240px;
+}
+
+.ark-delivery__inner-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ark-delivery__bottom-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c1c2c2;
+    border-radius: 20px;
+    max-width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.ark-delivery__bottom-caption {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+
+.bg-page {
+    background-image: url(../images/bg-bottom.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center 106%;
+}
+
+
 
 
 
@@ -491,6 +654,10 @@
 
     .ark-about__country-box {
         margin-bottom: 20px;
+    }
+
+    .ark-delivery__benefits {
+        flex-wrap: wrap;
     }
 }
 
@@ -517,6 +684,23 @@
 
     .ark-resource__sertificat-box {
         justify-content: center;
+    }
+
+    .ark-delivery__text-calc {
+        margin-bottom: 20px;
+    }
+
+    .ark-delivery__cdek-col div {
+        border-left: none;
+    }
+
+    .ark-delivery__cdek-img {
+        margin-bottom: 20px;
+    }
+
+    .ark-delivery__subtitle-bottom {
+        margin-left: 0px;
+        text-align: center;
     }
 
 }
@@ -577,6 +761,19 @@
         max-width: 160px;
     }
 
+    .ark-delivery__img-box {
+        margin-bottom: 30px;
+    }
+
+    .ark-delivery__pickup,
+    .ark-delivery__document {
+        flex-direction: column;
+    }
+
+    .ark-delivery__pickup img,
+    .ark-delivery__document img {
+        margin-bottom: 20px;
+    }
 }
 
 @media(max-width: 400px) {
