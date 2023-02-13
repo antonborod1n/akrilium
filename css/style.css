@@ -292,10 +292,19 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    cursor: pointer;
 }
 
 .ark-resource__sertificat-img {
     object-fit: cover;
+}
+
+.ark-resource__sertificat-img-box {
+    width: 162px;
+    height: 227px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* center blok */
@@ -310,8 +319,6 @@
     line-height: 24px;
     color: #44558f;
 }
-
-
 
 /* PAY PAGE */
 
@@ -415,8 +422,6 @@
     width: 350px;
 }
 
-.ark-delivery__text {}
-
 .ark-delivery__address {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -467,8 +472,6 @@
     padding: 30px;
     margin-bottom: 50px;
 }
-
-.ark-delivery__rules {}
 
 .ark-delivery__rules-title {
     font-family: 'Montserrat', sans-serif;
@@ -643,9 +646,7 @@
     background-position: center 106%;
 }
 
-
-
-
+/* MEDIA */
 
 @media(max-width: 1300px) {
     .ark-about__content-bottom {

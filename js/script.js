@@ -1,53 +1,24 @@
-/* document.addEventListener('DOMContentLoaded', function () {
-    // modalImg
-    const img = () => {
-        function modalRew(triggerSection, btnClick, closeSelector) {
-            const imgPopup = document.createElement('div');
-            const imgPopupContent = document.createElement('div');
-            const btnPopup = document.createElement('button');
-            const bigImage = document.createElement('img');
+(function () {
+    var elemTarget;
+    // создаём модальное окно
+    var modal = $modal({
+        title: 'Сертификат соответствия',
+        content: '<img src="" alt="" style="display: block; height: auto; max-width: 100%;">',
 
-            const portfolioSection = document.querySelector(triggerSection);
-            const close = document.querySelector(closeSelector);
-
-            imgPopup.classList.add('popup');
-            btnPopup.classList.add('popup__close');
-            imgPopupContent.classList.add('popup-content');
-
-            btnPopup.innerText = 'x';
-
-            portfolioSection.appendChild(imgPopup);
-            imgPopup.appendChild(imgPopupContent);
-            imgPopupContent.appendChild(bigImage);
-            imgPopupContent.appendChild(btnPopup);
-
-            imgPopup.style.justifyContent = 'center';
-            imgPopup.style.alignItems = 'center';
-            imgPopup.style.display = 'none';
-
-            portfolioSection.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                let target = e.target;
-
-                if (target && target.classList.contains(btnClick)) {
-                    imgPopup.style.display = 'flex';
-                    const path = target.parentNode.getAttribute('href');
-                    bigImage.setAttribute('src', path);
-
-                    console.log(path);
-                }
-
-                if (target && target.matches('div.popup')) {
-                    imgPopup.style.display = 'none';
-                } else if (target && target.matches('button.popup__close')) {
-                    imgPopup.style.display = 'none';
-                }
-            });
+    });
+    // при клике на документ
+    document.addEventListener('click', function (e) {
+        // если мы кликнули на измобржение расположенное в .img__items, то...
+        if (e.target.matches('.img__items img')) {
+            elemTarget = e.target;
+            // устанавливаем модальному окну title
+            modal.setContent('<div style="flex: 1 0 60%;"><img src="' + e.target.src + '" alt="' + e.target.alt + '" style="display: block; height: auto; max-width: 100%; margin: 0 auto;"></div><div style="flex: 1 0 40%;">');
+            modal.show();
+        } else if (e.target.dataset.handler === 'modalHandlerCancel') {
+            modal.hide();
+        } else if (e.target.dataset.handler === 'modalHandlerDelete') {
+            elemTarget.parentElement.removeChild(elemTarget);
+            modal.hide();
         }
-
-        modalRew('.ark-resource__sertificat-box', '.ark-resource__sertificat-img', '.popup .popup__close');
-    };
-
-    img();
-}) */
+    });
+})();
